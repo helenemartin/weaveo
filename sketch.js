@@ -9,13 +9,13 @@ var layer;
 var frame;
 
 function setup() {
-  canvas = createCanvas(1800, 1600);
+  canvas = createCanvas(1500, 1200);
   // layer = createVideo(['assets/5.mp4']);
   // layer.hide(); // by default video shows up in separate dom
   //                 // element. hide it and draw it to the canvas
   //                 // instead
   // layer.loop();
-  graphic = createGraphics(1500, 1200);
+  graphic = createGraphics(windowWidth,windowHeight);
   height = displayHeight;
   width = displayWidth;
   graphic.stroke('rgba(255,255,255, 0.8)');
@@ -75,5 +75,8 @@ function draw() {
     height = height - spacing;
     backgroundY = y;
   }
-
 }
+
+ window.onresize = function() {
+  graphic.size(windowWidth, windowHeight);
+ }
