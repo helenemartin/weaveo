@@ -9,7 +9,7 @@ var layer;
 var frame;
 
 function setup() {
-  canvas = createCanvas(windowWidth,windowHeight);
+  canvas = createCanvas(1800, 1600);
   // layer = createVideo(['assets/5.mp4']);
   // layer.hide(); // by default video shows up in separate dom
   //                 // element. hide it and draw it to the canvas
